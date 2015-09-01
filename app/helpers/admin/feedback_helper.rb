@@ -23,6 +23,9 @@ module Admin::FeedbackHelper
 
   def button_to_delete_comment(item)
     link_to(content_tag(:span, '', class: 'glyphicon glyphicon-trash'), { controller: 'admin/feedback', action: 'destroy', id: item.id }, { class: 'btn btn-danger btn-xs btn-action' })
+  # 'data-method' => :delete
+# TODO::
+  # link_to content_tag(:span, '', class: 'glyphicon glyphicon-trash'),url_for(action: :destroy,id: item.id),method: :delete, data: {confirm: "Are you sure?"}
   end
 
   def button_to_conversation(item)
@@ -36,6 +39,6 @@ module Admin::FeedbackHelper
 
     link_to(content_tag(:span, '', class: "glyphicon glyphicon-thumbs-#{direction}"),
             { controller: 'admin/feedback', action: 'change_state', id: item.id, context: context },
-            { class: "btn btn-#{button_type} btn-xs btn-action", remote: true })
+            { class: "btn btn-#{button_type} btn-xs btn-action", remote: true, method: 'post' })
   end
 end

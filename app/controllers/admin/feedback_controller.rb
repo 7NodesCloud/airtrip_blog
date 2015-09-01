@@ -85,12 +85,15 @@ class Admin::FeedbackController < Admin::BaseController
     respond_to do |format|
       if params[:context] != 'listing'
         @comments = Comment.last_published
-        page.replace_html('commentList', partial: 'admin/dashboard/comment')
+        # page.replace_html('commentList', partial: 'admin/dashboard/comment')
+        format.js {render inline: "location.reload();" }
       else
         if template == 'ham'
           format.js { render 'ham' }
+          format.html { render 'ham' }
         else
           format.js { render 'spam' }
+          format.html { render 'spam' }
         end
       end
     end
@@ -135,9 +138,9 @@ class Admin::FeedbackController < Admin::BaseController
     end
 
     if params[:article_id]
-      redirect_to action: 'article', id: params[:article_id], confirmed: params[:confirmed], published: params[:published]
+      redirect_to action: 'article', id: params[:article_id]#, confirmed: params[:confirmed], published: params[:published]
     else
-      redirect_to action: 'index', page: params[:page], search: params[:search], confirmed: params[:confirmed], published: params[:published]
+      redirect_to action: 'index'#, page: params[:page], search: params[:search], confirmed: params[:confirmed], published: params[:published]
     end
   end
 

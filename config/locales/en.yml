@@ -3,7 +3,7 @@ en:
     content:
       rss_feed: "RSS Feed"
       admin: "Admin"
-      powered_by_publify: "Powered by Publify"
+      powered_by: "Powered by Eagle Review"
       search: "Search"
   search_sidebar:
     content:
@@ -43,7 +43,7 @@ en:
       your_mail: "Your email"
     page:
       about: "About"
-      body: "This is an example of a Publify page. You can edit this to write information about yourself or your site so readers know who you are. You can create as many pages as you like and manage all of your content inside Publify."
+      body: "This is an example of a Eagle Review page. You can edit this to write information about yourself or your site so readers know who you are. You can create as many pages as you like and manage all of your content inside Eagle Review."
   comments:
     comment:
       said: "said"
@@ -117,8 +117,6 @@ en:
       your_message: "Your message"
       comment_markup_help: "Comment Markup Help"
       preview_comment: "Preview comment"
-    comment_errors:
-      message: "Oops, something wrong happened, the comment could not be saved."
     article_links:
       comments:
         zero: "no comments"
@@ -136,7 +134,7 @@ en:
     note:
       view_on_twitter: "View on Twitter"
   profile:
-    admin: "Publify administrator"
+    admin: "Eagle Review administrator"
     publisher: "Blog publisher"
     contributor: "Contributor"
   user:
@@ -184,7 +182,7 @@ en:
       previous_page: "Previous page"
   admin:
     base:
-      restart_application: "For security reasons, you should restart your Publify application. Enjoy your blogging experience."
+      restart_application: "For security reasons, you should restart your Eagle Review application. Enjoy your blogging experience."
       cant_generate_secret: "Error: can't generate secret token. Security is at risk. Please, change %{checker_file} content"
       successfully_saved: "%{element} was successfully saved."
       unsuccessfully_saved: "%{element} could not be saved."
@@ -235,19 +233,6 @@ en:
         choose_a_theme: "Choose a theme"
         use_this_theme: "Use this theme"
         active_theme: "%{name} - Active theme"
-    migrations:
-      show:
-        database_migration: "Database migration"
-        information: "Information"
-        current_database_version: "Current database version"
-        you_are_up_to_date: "You are up to date!"
-        migrations: "Migrations"
-        migration_pending:
-          one: "There is one migration pending."
-          other: "There are %{count} migrations pending."
-        needed_migrations: "Needed migrations"
-        update_database_now: "Update database now"
-        may_take_a_moment: "may take a moment"
     profiles:
       index:
         your_profile: "Your profile"
@@ -286,7 +271,7 @@ en:
         feed_articles: "Article excerpts"
         feed_settings: "RSS Feed Settings"
         feed_excerpts_only: "Show only article excerpts in feed"
-        feedburner_help: "Enter your FeedBurner ID if you wish to use your Google FeedBurner account instead of using the Publify feed URL."
+        feedburner_help: "Enter your FeedBurner ID if you wish to use your Google FeedBurner account instead of using the Eagle Review feed URL."
         feedburner_id: "FeedBurner ID"
         publishing_options: "Publishing Options"
         status_main_feed: "Display statuses in the main feed"
@@ -312,14 +297,14 @@ en:
         spam: "Spam"
         spam_protection: "Spam protection"
         enable_spam_protection: "Enable spam protection"
-        explain_spam_protection: "Enabling spam protection will make Publify compare the IP address of posters as well as the contents of their posts against local and remote blacklists. Good defense against spam bots"
+        explain_spam_protection: "Enabling spam protection will make Eagle Review compare the IP address of posters as well as the contents of their posts against local and remote blacklists. Good defense against spam bots"
         askimet_key: "Akismet Key"
-        explain_spamfiltering: "Publify can (optionally) use the <a href='http://akismet.com'>Akismet</a> spam-filtering service.  You need to register with Akismet and receive an API key before you can use their service.  If you have an Akismet key, enter it here"
+        explain_spamfiltering: "Eagle Review can (optionally) use the <a href='http://akismet.com'>Akismet</a> spam-filtering service.  You need to register with Akismet and receive an API key before you can use their service.  If you have an Akismet key, enter it here"
         disable_comments_after: "Disable comments after"
         days: "days"
         set_to_0_to_never_disable_comments: "Set to 0 to never disable comments"
         max_links: "Max Links"
-        explain_reject_comments: "Publify will automatically reject comments and trackbacks which contain over a certain amount of links in them"
+        explain_reject_comments: "Eagle Review will automatically reject comments and trackbacks which contain over a certain amount of links in them"
         set_to_0_to_never_reject_comments: "Set to 0 to never reject comments"
         captcha: "Captcha"
         enable_recaptcha: "Enable reCaptcha"
@@ -335,7 +320,7 @@ en:
         publish: "Publish"
         trackbacks: "Trackbacks"
         send_trackbacks: "Send trackbacks"
-        explain: "When publishing articles, Publify can send trackbacks to websites that you link to. This should be disabled for private blogs as it will leak non-public information to sites that you're discussing. For public blogs, there's no real point in disabling this."
+        explain: "When publishing articles, Eagle Review  can send trackbacks to websites that you link to. This should be disabled for private blogs as it will leak non-public information to sites that you're discussing. For public blogs, there's no real point in disabling this."
         urls_to_ping: "URLs to ping automatically"
         latitude_longitude: "Latitude, Longitude"
         display: "Display"
@@ -348,6 +333,18 @@ en:
         publish_on_twitter: "Publish on Twitter"
         twitter_consumer_key: "Twitter consumer key"
         twitter_consumer_secret: "Twitter consumer secret"
+      update_database:
+        database_migration: "Database migration"
+        information: "Information"
+        current_database_version: "Current database version"
+        you_are_up_to_date: "You are up to date!"
+        migrations: "Migrations"
+        migration_pending:
+          one: "There is one migration pending."
+          other: "There are %{count} migrations pending."
+        needed_migrations: "Needed migrations"
+        update_database_now: "Update database now"
+        may_take_a_moment: "may take a moment"
       index:
         cancel: "Cancel"
         or: "or"
@@ -362,17 +359,14 @@ en:
         allow_users_to_register: "Allow users to register"
         explain_allow_users_to_register: "This will allow users to register themselves as contributors, an unprivileged account level which grants them no rights beyond owning a profile on the site. If you don't want users to register, you can add them via <em>Manage users</em> under <em>Settings</em>."
         source_email: "Source Email"
-        email_address_used_to_notify: "Email address used by Publify to send notifications"
+        email_address_used_to_notify: "Email address used by Eagle Review to send notifications"
         items_to_display_in_admin_lists: "Items to display in admin lists"
     seo:
-      show:
+      titles:
         cancel: "Cancel"
         or: "or"
         update_settings: "Update settings"
-        global_settings: "Global settings"
         title_settings: "Title settings"
-        permalinks: "Permalinks"
-      titles:
         home: "Home"
         title_template: "Title template"
         description_template: "Description template"
@@ -405,7 +399,11 @@ en:
         replaced_by_the_archive_date: "Replaced by the archive date"
         replaced_by_the_content_body: "Replaced by the content body"
       permalinks:
-        explain: "Publify offers you the ability to create a custom URL structure for your permalinks and archives. This can improve the aesthetics, usability, and forward-compatibility of your links."
+        cancel: "Cancel"
+        or: "or"
+        update_settings: "Update settings"
+        explain: "Eagle Review offers you the ability to create a custom URL structure for your permalinks and archives. This can improve the aesthetics, usability, and forward-compatibility of your links."
+        permalinks: "Permalinks"
         permalink_format: "Permalink format"
         date_and_title: "Date and title"
         month_and_title: "Month and title"
@@ -418,10 +416,14 @@ en:
         your_article_month: "your article month of publication."
         your_article_day: "your article day of publication."
         help_on_permalink_settings: "Help on permalink settings"
-      general:
+      index:
         human: "Human"
         humans_txt: "Human"
         explain_humans_txt: "It's an initiative for knowing the people behind a website. It's a TXT file that contains information about the different people who have contributed to building the website. http://humanstxt.org/"
+        cancel: "Cancel"
+        or: "or"
+        update_settings: "Update settings"
+        global_settings: "Global settings"
         general_settings: "General settings"
         meta_keywords: "Meta keywords"
         use_meta_keywords: "Use meta keywords"
@@ -449,7 +451,7 @@ en:
         explain_rss_description: "You can use the following tags: %author% (author name), %blog_url% (this blog URL), %blog_name% (this blog title) and %permalink_url% (a link to the article you want to protect)"
     shared:
       macros:
-        show_help_on_publify_macros: "Show help on Publify macros"
+        show_help_on_publify_macros: "Show help on Eagle Review macros"
         name: "Name"
         description: "Description"
         tag: "Tag"
@@ -501,8 +503,8 @@ en:
         description: "Description"
         template_name: "Template name"
         default: "Default"
-        publify_default_post_type: "Publify default post type"
-        explain: "The template name is the filename Publify will look for when calling an article of that type. It should be in your theme under views/articles/template name.html.erb"
+        eagle_review_default_post_type: "Eagle Review default post type"
+        explain: "The template name is the filename Eagle Review will look for when calling an article of that type. It should be in your theme under views/articles/template name.html.erb"
     pages:
       new:
         success: "New page created"
@@ -602,14 +604,20 @@ en:
         mark_checked_items_as_spam: "Mark Checked Items as Spam"
         mark_checked_items_as_ham: "Mark Checked Items as Ham"
         submit: "Submit"
-      feedback:
-        this_comment_by_was_flagged_as_spam: "This comment by %{author} was flagged as spam, %{cancel_link}?"
+      spam:
+        this_comment_by_was_flagged_as_spam: "This comment by %{author} was flagged as spam!"
         cancel: "Cancel"
+        change: "Change"
+        by: "By:"
+        on1: "On"
+      ham:
+        by: "By:"
+        on1: "On"
     dashboard:
       publify_version:
-        error: "You are at least one major version of Publify out of date. You should upgrade immediately. Download and install <a href='http://publify.co/stable.tgz'>the latest Publify version</a>"
-        warning: "There's a new version of Publify available which may contain important bug fixes. Why don't you upgrade to <a href='http://publify.co/stable.tgz'>the latest Publify version</a>?"
-        notice: "There's a new version of Publify available. Why don't you upgrade to <a href='http://publify.co/stable.tgz'>the latest Publify version</a>?"
+        error: "You are at least one major version of Eagle Review out of date. You should upgrade immediately. Download and install <a href='http://publify.co/stable.tgz'>the latest Eagle Review version</a>"
+        warning: "There's a new version of Eagle Review available which may contain important bug fixes. Why don't you upgrade to <a href='http://publify.co/stable.tgz'>the latest Eagle Review version</a>?"
+        notice: "There's a new version of Eagle Review available. Why don't you upgrade to <a href='http://publify.co/stable.tgz'>the latest Eagle Review version</a>?"
       index:
         welcome_back: "Welcome back, %{user_name}!"
       drafts:
@@ -618,7 +626,7 @@ en:
       welcome:
         today: "Today"
         articles_and_comments_count_since: "%{articles_count} articles and %{comments_count} comments were posted since your last login"
-        running_publify: "You're running Publify %{version}"
+        running_publify: "You're running Eagle Review"
         content: "Content"
         articles_count:
           zero: "no article"
@@ -658,7 +666,7 @@ en:
           one: "1 spam"
           other: "%{count} spam"
       overview:
-        dashboard_explain: "This place gives you a quick overview of what happens on your Publify blog and what you can do. Maybe will you want to %{available_actions}"
+        dashboard_explain: "This place gives you a quick overview of what happens on your Eagle Review blog and what you can do. Maybe will you want to %{available_actions}"
         write_a_post: "write a post"
         write_a_page: "write a page"
         update_your_profile_or_change_your_password: "update your profile or change your password"
@@ -773,7 +781,7 @@ en:
         stats: "There are currently %{files_count} files in cache for a total amount of %{size} Kb"
         sweep_cache: "Sweep cache"
         cache: "Cache"
-        explaination: "To save on resources, Publify generates static files along with your content. These files are deleted when a new article is created. You can, at any time, delete these files yourself."
+        explaination: "To save on resources, Eagle Review generates static files along with your content. These files are deleted when a new article is created. You can, at any time, delete these files yourself."
       destroy:
         success: "Cache has been cleared"
         error: "Cache could not be cleared"

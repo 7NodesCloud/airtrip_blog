@@ -119,6 +119,7 @@ Rails.application.routes.draw do
       member do
         get 'article'
         post 'change_state'
+        post 'update'
       end
     end
 
