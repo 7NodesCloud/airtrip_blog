@@ -41,8 +41,8 @@ AccessControl.map require: [ :admin, :publisher, :contributor ]  do |map|
     project.submenu "New Article",    { controller: "admin/content", action: "new" }
     project.submenu "Feedback",       { controller: "admin/feedback", action: "index" }
     project.submenu "Tags",           { controller: "admin/tags", action: "index" }
-    project.submenu "Article Types",  { controller: "admin/post_types", action: "index" }
-    project.submenu "Redirects",      { controller: "admin/redirects", action: "index" }
+    # project.submenu "Article Types",  { controller: "admin/post_types", action: "index" }
+    # project.submenu "Redirects",      { controller: "admin/redirects", action: "index" }
   end
 
   map.project_module :pages, nil do |project|
@@ -51,20 +51,20 @@ AccessControl.map require: [ :admin, :publisher, :contributor ]  do |map|
     project.submenu "New Page",   { controller: "admin/pages", action: "new" }
   end
 
-  map.project_module :media, nil do |project|
-    project.menu "Media Library", { controller: "admin/resources", action: "index" }
-  end
+  # map.project_module :media, nil do |project|
+  #   project.menu "Media Library", { controller: "admin/resources", action: "index" }
+  # end
 
-  map.project_module :themes, nil do |project|
-    project.menu    "Design",             { controller: "admin/themes", action: "index"  }
-    project.submenu "Choose theme",       { controller: "admin/themes", action: "index"  }
-    project.submenu "Customize sidebar",  { controller: "admin/sidebar", action: "index" }
+  # map.project_module :themes, nil do |project|
+  #   project.menu    "Design",             { controller: "admin/themes", action: "index"  }
+  #   project.submenu "Choose theme",       { controller: "admin/themes", action: "index"  }
+  #   project.submenu "Customize sidebar",  { controller: "admin/sidebar", action: "index" }
 
-    AccessControl.search_plugins_directory.each do |plugin|
-      project.submenu AccessControl.get_plugin_litteral_name(plugin),
-        { controller: "admin/#{AccessControl.get_plugin_controller_name(plugin)}", action: "index" }
-    end
-  end
+  #   AccessControl.search_plugins_directory.each do |plugin|
+  #     project.submenu AccessControl.get_plugin_litteral_name(plugin),
+  #       { controller: "admin/#{AccessControl.get_plugin_controller_name(plugin)}", action: "index" }
+  #   end
+  # end
 
   map.project_module :settings, nil do |project|
     project.menu    "Settings",         { controller: "admin/settings",    action: "index" }
@@ -76,9 +76,9 @@ AccessControl.map require: [ :admin, :publisher, :contributor ]  do |map|
     project.submenu "Manage users",     { controller: "admin/users",       action: "index" }
   end
 
-  map.project_module :notes, nil do |project|
-    project.menu "Notes", { controller: "admin/notes", action: "index" }
-  end
+  # map.project_module :notes, nil do |project|
+  #   project.menu "Notes", { controller: "admin/notes", action: "index" }
+  # end
 
   map.project_module :seo, nil do |project|
     project.menu    "SEO",  { controller: "admin/seo", action: "show" }

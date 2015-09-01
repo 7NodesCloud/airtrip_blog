@@ -10,14 +10,16 @@
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class='navbar-header'>
-        <%= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-th'), this_blog.base_url, class: 'navbar-brand' )%>
+       <%= link_to(image_tag("logo.png"), this_blog.base_url, class: '' )%>
+        <%#= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-th'), this_blog.base_url, class: 'navbar-brand' )%>
       </div>
       <ul class='nav navbar-nav pull-right'>
-        <li><%= link_to(t('.statuses'), {controller: 'notes'}) %></li>
-        <li><%= link_to(t('.archives'), {controller: 'articles', action: 'archives'}) %></li>
         <%- Page.published.each do |page| %>
         <li><%= link_to_permalink(page, page.title) %></li>
         <%- end %>
+        <%- unless request.path == "/"%>
+          <li><%= link_to "Back", root_path%></li>
+        <%- end %> 
       </ul>
     </div>
   </nav>
@@ -47,6 +49,6 @@
       <div class='span7'></div>
     </div>
   </div>
-  <p style='text-align: center'><small>Powered by <a href='http://publify.co'>Publify</a> | Photo <a href='http://startupstockphotos.com/'>Startup stock photos</a></small></p>
+  <p style='text-align: center'><small>Powered by <a href='http://www.eagle-review.com/'>Eagle Review</a></small></p>
 </body>
 </html>

@@ -77,7 +77,7 @@ function check_all(checkbox) {
 }
 
 $(document).ready(function() {
-  $('#article_form').each(function(e){autosave_request(e)});
+  // $('#article_form').each(function(e){autosave_request(e)});
   $('#article_form').submit(function(e){save_article_tags()});
   $('#article_form').each(function(e){tag_manager()});
   $('#article_form').each(function(e){set_widerea($('#article_body_and_extended'))});
