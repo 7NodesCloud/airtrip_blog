@@ -851,7 +851,7 @@ en:
     back_to: "&larr; Back to %{place}"
     back_to_login: "Back to login"
     create_account: "Create an account"
-    lost_my_password: "I've lost my password"
+    lost_my_password: "Forgot your password?"
     login:
       title: "Login"
       login: "Login"
